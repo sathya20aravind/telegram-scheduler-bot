@@ -12,8 +12,11 @@ scheduler = BlockingScheduler()
 def send_message():
     bot.send_message(chat_id=CHAT_ID, text=MESSAGE)
 
-# Schedule the job daily at 9:00 AM (adjust as needed)
-scheduler.add_job(send_message, 'cron', hour=9, minute=0)
+# Schedule the job for Morning 8:00 AM
+scheduler.add_job(send_message, 'cron', hour=8, minute=0)
+
+# Schedule the job for Night 8:30 PM
+scheduler.add_job(send_message, 'cron', hour=20, minute=30)
 
 if __name__ == "__main__":
     print("Bot is running...")
