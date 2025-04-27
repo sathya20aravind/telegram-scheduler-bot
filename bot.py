@@ -8,6 +8,10 @@ api_id = os.getenv('23223277')
 api_hash = os.getenv('dde3c4460bf46f0d41c43011423c2be4')
 receiver = os.getenv('721639032')  # Chat ID instead of username
 
+# Debugging: Print the values to check if they are being loaded correctly
+print(f"API_ID: {api_id}")
+print(f"API_HASH: {api_hash}")
+
 message_1 = 'Good Morning my love! Mathara podu d chellam 💖'
 message_2 = 'Good Night my love! Mathara podu d chellam 🌙'
 
