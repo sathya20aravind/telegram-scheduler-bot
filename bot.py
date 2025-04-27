@@ -4,9 +4,9 @@ import time
 from datetime import datetime
 
 # Use environment variables for API credentials
-api_id = os.getenv('API_ID')
-api_hash = os.getenv('API_HASH')
-receiver = os.getenv('RECEIVER_CHAT_ID')  # Chat ID instead of username
+api_id = os.getenv('23223277')
+api_hash = os.getenv('dde3c4460bf46f0d41c43011423c2be4')
+receiver = os.getenv('721639032')  # Chat ID instead of username
 
 message_1 = 'Good Morning my love! Mathara podu d chellam 💖'
 message_2 = 'Good Night my love! Mathara podu d chellam 🌙'
