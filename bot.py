@@ -3,18 +3,15 @@ from telethon import TelegramClient
 import time
 from datetime import datetime
 
-# Use environment variables for API credentials
-api_id = os.getenv('API_ID')  # Should fetch API ID
-api_hash = os.getenv('API_HASH')  # Your API hash here
-receiver = os.getenv('RECEIVER_CHAT_ID')  # Chat ID from environment variable
-
-# Debugging: Print the values to check if they are being loaded correctly
-print(f"API_ID: {api_id}")
-print(f"API_HASH: {api_hash}")
+# Retrieve API credentials from environment variables
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
+receiver = os.getenv('RECEIVER_CHAT_ID')
 
 message_1 = 'Good Morning my love! Mathara podu d chellam 💖'
 message_2 = 'Good Night my love! Mathara podu d chellam 🌙'
 
+# Create the Telegram client
 client = TelegramClient('session_name', api_id, api_hash)
 
 async def send_message():
@@ -25,9 +22,10 @@ async def send_message():
         await client.send_message(receiver, message_2)
 
 async def main():
-    await client.start()  
+    # Start the client, this will ask for OTP if it's the first time
+    await client.start()
     while True:
-        await send_message()  
+        await send_message()
         time.sleep(60)  # Check every minute
 
 with client:
